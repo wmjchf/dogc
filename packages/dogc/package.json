@@ -1,6 +1,6 @@
 {
   "name": "@bufang/dogc",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "致力打造一款 react 移动端 ui 组建库",
   "keywords": [
     "react组件库",
