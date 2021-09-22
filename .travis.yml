@@ -1,0 +1,34 @@
+language: node_js
+node_js:
+  - "14"
+sudo: required
+cache:
+  yarn: true
+branches:
+  only:
+    - master
+    - /v\d+\.\d+\.\d+/
+install:
+  - yarn install
+  - echo "install successed"
+os:
+  - linux
+stages:
+  - wang
+jobs:
+  include:
+    - stage: wang
+      script:
+        - cd packages/dogc
+        - echo "进入packages/wangUI成功"
+        - yarn run build
+        - mv ./lib/cjs/types ./
+        - rm -rf ./lib/es/types
+      deploy:
+        provider: npm
+        email: "$NPM_EMAIL"
+        api_key:
+          secure: JaZKyVJNuYRiKlOjaT5p413Nkqbx3nBfbFPmAAVp9BjdSGgbQqi2H/ifaVZazfX6W/w6rcG8PYa1b/9FrfoB+ZXZjvI7e9NjqVm5XU5fuF3iFLQm5j9thZxRtQ6YCKiDXR2R3e5GeftoPpvY3aj7+pTj0fChf77LCR7b7shSnRCo+naDJE00n91n5pvy6kbW6J6/WZgcK4wyvcX4qgaUvnSnAM0CT6lN3n6iG+arDf75a0TbeP7aYb8R++fx49aWDeo6izt+bZDjLy2tiPcIPmZofY0G189VfCF3hUQzJLVHq8l7b9mWBfdmOgyb3jCU4ASjIHlgADP3+cjjyuLRerRe/SoJMRmWdB1DkQeguRThqp65u/bMIjXmwSh7Coxe1iT13kM/Nf+i7W5TiQqoWuzSAMWFOhRA4Si7z72oL40l7cVbixPTwVbXkOyGnRkk713skvCSZa412Vsx/occJxOI9iJzeOG1YFRG7jgSfEk8yD9BbVOntfxq1gzzQF7nybuNbD2HMqbEBpJSrF3RP88kZFW7+BBmLHFeFfojEucdxkLvoQnqN899fEL7QSGhRvcK4wU9dT2aciQLJK9n8l06MZllt2/zIf89Z85kubTjcU1yHF5hvgQmncJcnUqMNwT0qzguF0NzU/IUU0iWfEakhsIlLn0ha2BLtB4hxCA=
+        skip_cleanup: true
+        on:
+          tags: true

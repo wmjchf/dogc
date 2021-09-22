@@ -1,0 +1,54 @@
+{
+  "name": "@bufang/dogc",
+  "version": "0.0.0",
+  "description": "致力打造一款 react 移动端 ui 组建库",
+  "keywords": [
+    "react组件库",
+    "移动端",
+    "styled-components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmjchf/wangUI.git"
+  },
+  "main": "lib/cjs/index.js",
+  "module": "lib/es/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build:es": "eslint src & cross-env MODULE_ENV=es rollup -c",
+    "build:cjs": "eslint src & cross-env MODULE_ENV=cjs rollup -c",
+    "build:umd": "eslint src & cross-env MODULE_ENV=umd rollup -c",
+    "build": "yarn run build:es & yarn run build:cjs",
+    "del": "rimraf lib",
+    "postversion": "git push --follow-tags"
+  },
+  "author": "wang",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "acorn-jsx": "^5.3.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-polyfill-node": "^0.7.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "core-js": "^3.17.3",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
