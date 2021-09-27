@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-09-16 17:57:29
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-09-27 18:02:00
+ * @LastEditTime: 2021-09-27 18:03:32
 -->
 
 # wangUI
@@ -19,9 +19,10 @@
 - [x] 支持 typescirpt。
 - [x] 支持 Tree Shaking
 - [x] 支持 以组件维度进行 split code
-- [ ] 支持 esm、cjs、umd 模块导出
-- [ ] 支持 styled-components
+- [x] 支持 esm、cjs 模块导出
+- [x] 支持 styled-components
 - [x] 支持 travis 自动化打包发布
+- [x] monorepo 管理组件库
 
 # 组件清单
 
