@@ -4,11 +4,11 @@
  * @Author: wjm
  * @Date: 2021-09-27 14:21:15
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-09-27 16:37:44
+ * @LastEditTime: 2021-09-28 13:30:00
  */
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import DogCContext, { DogCContextProp } from "../DogCContext";
+import DogCContext, { DogCContextProp } from "@components/DogCContext";
 
 type ExtDogCConextProp = {
   children?: React.ReactElement;

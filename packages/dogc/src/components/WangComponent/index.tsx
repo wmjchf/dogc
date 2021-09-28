@@ -4,10 +4,10 @@
  * @Author: wjm
  * @Date: 2021-09-15 19:41:28
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-09-27 15:49:24
+ * @LastEditTime: 2021-09-28 13:04:27
  */
-import React, { useContext } from "react";
-import DogCContext from "../DogCContext";
+import React from "react";
+import { useDogC } from "@hooks/useDogC";
 
 export type IWangComponentProp = {
   name: string;
@@ -15,7 +15,7 @@ export type IWangComponentProp = {
 export const WangComponent: React.FC<IWangComponentProp> = (
   props: IWangComponentProp,
 ) => {
-  const { dogcConfig, dogcTheme } = useContext(DogCContext);
+  const { dogcConfig, dogcTheme } = useDogC();
   return (
     <div>
       <span>{props.name}</span>

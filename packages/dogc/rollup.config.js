@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-09-10 19:49:36
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-09-27 16:33:55
+ * @LastEditTime: 2021-09-28 13:27:56
  */
 import path from "path";
 import fs from "fs";
@@ -12,6 +12,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import babel from "@rollup/plugin-babel";
+import alias from "@rollup/plugin-alias";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import jsx from "acorn-jsx";
 
@@ -57,6 +58,20 @@ export default {
   // extensions: [".tsx", ".ts"],
   acornInjectPlugins: [jsx()],
   plugins: [
+    alias({
+      entries: [
+        {
+          find: "@hooks",
+          replacement: path.resolve(__dirname, "src/hooks"),
+          extensions: [".ts", ".tsx"],
+        },
+        {
+          find: "@components",
+          replacement: path.resolve(__dirname, "src/components"),
+          extensions: [".ts", ".tsx"],
+        },
+      ],
+    }),
     peerDepsExternal(),
     // plugins 需要注意引用顺序
     nodeResolve(),
