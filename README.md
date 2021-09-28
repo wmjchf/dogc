@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-09-16 17:57:29
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-09-27 18:03:32
+ * @LastEditTime: 2021-09-28 14:06:35
 -->
 
 # wangUI
@@ -27,3 +27,15 @@
 # 组件清单
 
 - [x] 全局配置 DogCProvider
+
+```
+<DogCProvider dogcConfig={dogcConfig} dogcTheme={dogcTheme}></DogCProvider>
+```
+
+# hooks
+
+- [x] useDogC
+
+```
+{dogcConfig, dogcTheme} = useDogC();
+```
