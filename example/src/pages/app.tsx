@@ -2,17 +2,20 @@
  * @Descripttion:
  * @version:
  * @Author: wjm
- * @Date: 2021-09-17 18:09:53
+ * @Date: 2021-11-06 16:46:30
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-11-06 13:16:42
+ * @LastEditTime: 2021-11-06 17:22:40
  */
 import React from "react";
-import { Button } from "@bufang/dogc";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "../routes";
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
   return (
-    <div>
-      <Button type="primary" />
-    </div>
+    <Router>
+      <Routes />
+    </Router>
   );
 };
+
+export default App;

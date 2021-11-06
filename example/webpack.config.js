@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 10:13:49
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-11-06 13:17:53
+ * @LastEditTime: 2021-11-06 18:56:18
  */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -53,5 +53,6 @@ module.exports = {
     static: "./dist",
     compress: true,
     port: 8001,
+    historyApiFallback: true,
   },
 };
