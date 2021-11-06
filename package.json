@@ -10,7 +10,9 @@
   "scripts": {
     "prepare": "husky install",
     "build:dev": "cd example && webpack server",
-    "build:dogc": "cd packages/dogc && npm run build"
+    "build:dogc": "cd packages/dogc && npm run build",
+    "dumi:dev": "cross-env APP_ROOT=site dumi dev",
+    "dumi:build": "cross-env APP_ROOT=site dumi build"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -28,6 +30,8 @@
     "babel-plugin-import": "^1.13.3",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
+    "dumi": "^1.0.13",
+    "dumi-theme-mobile": "^1.1.14",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
