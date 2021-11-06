@@ -11,13 +11,13 @@
     "type": "git",
     "url": "https://github.com/wmjchf/wangUI.git"
   },
-  "main": "lib/cjs/index.js",
-  "module": "lib/es/index.js",
-  "types": "types/index.d.ts",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "types": "es/types/index.d.ts",
   "scripts": {
-    "build:es": "eslint src & cross-env MODULE_ENV=es rollup -c",
-    "build:cjs": "eslint src & cross-env MODULE_ENV=cjs rollup -c",
-    "build:umd": "eslint src & cross-env MODULE_ENV=umd rollup -c",
+    "build:es": "cross-env MODULE_ENV=es rollup -c",
+    "build:cjs": "cross-env MODULE_ENV=cjs rollup -c",
+    "build:umd": "cross-env MODULE_ENV=umd rollup -c",
     "build": "yarn run build:es & yarn run build:cjs",
     "del": "rimraf lib",
     "postversion": "git push --follow-tags"
@@ -33,20 +33,19 @@
     "@rollup/plugin-typescript": "^8.2.5",
     "acorn-jsx": "^5.3.2",
     "rollup": "^2.56.3",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-polyfill-node": "^0.7.0"
+    "rollup-plugin-polyfill-node": "^0.7.0",
+    "rollup-plugin-styles": "^3.14.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.15.4",
-    "@babel/runtime-corejs3": "^7.15.4",
-    "core-js": "^3.17.3",
-    "react-dom": "^17.0.2",
-    "styled-components": "^5.3.1"
+    "core-js": "^3.17.3"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs3": "^7.15.4",
     "react": "^17.0.2",
-    "styled-components": "^5.3.1"
+    "classnames": "^2.3.1",
+    "@babel/runtime-corejs3": "^7.15.4"
   },
   "files": [
     "lib",

@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: wjm
+ * @Date: 2021-11-06 10:13:49
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2021-11-06 13:17:53
+ */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
@@ -19,6 +27,21 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.(less)$/,
+
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "less-loader",
+          },
+        ],
+      },
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node-modules/,
