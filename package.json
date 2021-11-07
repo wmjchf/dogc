@@ -4,15 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "site"
   ],
   "private": true,
   "scripts": {
     "prepare": "husky install",
     "build:dev": "cd example && webpack server",
     "build:dogc": "cd packages/dogc && npm run build",
-    "dumi:dev": "cross-env APP_ROOT=site dumi dev",
-    "dumi:build": "cross-env APP_ROOT=site dumi build"
+    "site:doc": "cd site && gatsby develop"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
