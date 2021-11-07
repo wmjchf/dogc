@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 23:36:05
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-11-06 23:36:18
+ * @LastEditTime: 2021-11-07 11:19:58
  */
 export default {
   title: "react移动端组件库",
@@ -14,14 +14,4 @@ export default {
   },
   mode: "site",
   outputPath: "dist",
-  navs: [
-    {
-      title: "组件库",
-      path: "/components",
-    },
-    {
-      title: "GitHub",
-      path: "https://github.com/wmjchf/bufang-ui.git",
-    },
-  ],
 };
