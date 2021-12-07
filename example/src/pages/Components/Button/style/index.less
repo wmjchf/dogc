@@ -1,0 +1,39 @@
+.button_demo {
+  padding: 8px 16px;
+  min-height: 100vh;
+
+  .title {
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+  }
+  .description {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+
+  .button_demo_container1 {
+    margin-top: 12px;
+    & > span {
+      font-size: 14px;
+      color: #333;
+    }
+    & > div {
+      margin-top: 8px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .dogc-button {
+        margin-right: 8px;
+        margin-bottom: 8px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

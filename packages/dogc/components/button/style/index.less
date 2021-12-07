@@ -1,10 +1,142 @@
-.bufang {
+@import "../../loading/style/index.less";
+@import "../../style/default.less";
+@import "../../style/variable.less";
+.dogc {
   &-button {
-    width: 100px;
-    height: 50px;
-    border-radius: 20px;
-    background: yellowgreen;
-    text-align: center;
-    line-height: 50px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: var(--dogc-border-radius-small);
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    color: var(--dogc-color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &-icon {
+      span {
+        margin-left: @spacing-tight;
+      }
+    }
+    &-loading {
+      span {
+        margin-left: @spacing-tight;
+      }
+    }
+  }
+  &-primary-button {
+    background-color: var(--dogc-color-primary);
+    &-hover {
+      &.bufang-primary-button-plain {
+        background-color: var(--dogc-color-primary);
+        color: var(--dogc-color-white);
+      }
+      background-color: var(--dogc-color-primary-hover);
+    }
+    &-plain {
+      background-color: var(--dogc-color-white);
+      border: solid 1px var(--dogc-color-primary);
+      color: var(--dogc-color-primary);
+    }
+    &-disabled {
+      background-color: var(--dogc-color-primary-disabled);
+    }
+  }
+  &-success-button {
+    background-color: var(--dogc-color-success);
+    &-hover {
+      &.bufang-success-button-plain {
+        background-color: var(--dogc-color-success);
+        color: var(--dogc-color-white);
+      }
+      background-color: var(--dogc-color-success-hover);
+    }
+    &-plain {
+      background: var(--dogc-color-white);
+      border: solid 1px var(--dogc-color-success);
+      color: var(--dogc-color-success);
+    }
+    &-disabled {
+      background-color: var(--dogc-color-success-disabled);
+    }
+  }
+  &-danger-button {
+    background-color: var(--dogc-color-danger);
+    &-hover {
+      &.bufang-danger-button-plain {
+        background-color: var(--dogc-color-danger);
+        color: var(--dogc-color-white);
+      }
+      background-color: var(--dogc-color-danger-hover);
+    }
+    &-plain {
+      background: var(--dogc-color-white);
+      border: solid 1px var(--dogc-color-danger);
+      color: var(--dogc-color-danger);
+    }
+    &-disabled {
+      background-color: var(--dogc-color-danger-disabled);
+    }
+  }
+  &-warning-button {
+    background-color: var(--dogc-color-warning);
+    &-hover {
+      &.bufang-warning-button-plain {
+        background-color: var(--dogc-color-warning);
+        color: var(--dogc-color-white);
+      }
+      background-color: var(--dogc-color-warning-hover);
+    }
+    &-plain {
+      background: var(--dogc-color-white);
+      border: solid 1px var(--dogc-color-warning);
+      color: var(--dogc-color-warning);
+    }
+    &-disabled {
+      background-color: var(--dogc-color-warning-disabled);
+    }
+  }
+  &-info-button {
+    background-color: var(--dogc-color-info);
+    &-hover {
+      &.bufang-info-button-plain {
+        background-color: var(--dogc-color-info);
+        color: var(--dogc-color-white);
+      }
+      background-color: var(--dogc-color-info-hover);
+    }
+    &-plain {
+      background: var(--dogc-color-white);
+      border: solid 1px var(--dogc-color-info);
+      color: var(--dogc-color-info);
+    }
+    &-disabled {
+      background-color: var(--dogc-color-info-disabled);
+    }
+  }
+
+  &-middle-button {
+    padding: 6px 16px;
+    font-size: @font-size-small;
+    min-width: 64px;
+  }
+  &-small-button {
+    padding: 3px 9px;
+    font-size: @font-size-xsmall;
+    min-width: 64px;
+  }
+  &-large-button {
+    padding: 8px 22px;
+    font-size: @font-size-regular;
+    min-width: 64px;
   }
 }
