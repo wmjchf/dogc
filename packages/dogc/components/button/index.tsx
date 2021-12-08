@@ -4,11 +4,11 @@
  * @Author: wjm
  * @Date: 2021-11-06 12:05:16
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-07 23:04:03
+ * @LastEditTime: 2021-12-08 22:47:31
  */
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
-import { Loading } from "../loading/index";
+import Icon from "../icon";
 import "./style/index.less";
 
 type ButtonType = "info" | "primary" | "success" | "warning" | "danger";
@@ -90,7 +90,7 @@ const Button: React.FC<IButtonProps> = props => {
       style={style}
       ref={buttonRef}>
       {icon && (() => icon)()}
-      {!icon && loading && <Loading />}
+      {!icon && loading && <Icon type="loading" />}
       <span>{props.children}</span>
     </div>
   );

@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 15:07:07
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-05 14:22:10
+ * @LastEditTime: 2021-12-08 22:58:30
  */
 import React from "react";
 import { RouteObject, Navigate, useRoutes } from "react-router-dom";
@@ -14,6 +14,8 @@ import Doc from "../pages/Doc";
 import ComponentList from "../pages/ComponentNav";
 // 组件
 import ButtonPage from "../pages/Components/Button";
+import CellPage from "../pages/Components/Cell";
+import IconPage from "../pages/Components/Icon";
 
 interface CustomRouteObject extends RouteObject {
   caseSensitive?: boolean;
@@ -51,6 +53,14 @@ const routes: CustomRouteObject[] = [
       {
         path: "button",
         element: <ButtonPage />,
+      },
+      {
+        path: "icon",
+        element: <IconPage />,
+      },
+      {
+        path: "cell",
+        element: <CellPage />,
       },
     ],
   },
