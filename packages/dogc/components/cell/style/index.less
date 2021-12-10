@@ -1,12 +1,48 @@
 @import "../../loading/style/index.less";
 @import "../../style/default.less";
 @import "../../style/variable.less";
-.dog {
+.dogc {
   &-cell {
-    padding: 8px 16px;
-    background-color: red;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 16px;
+    &-hover {
+      background-color: var(--dogc-color-fill-0);
+    }
+    &-container {
+      padding: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid 1px var(--dogc-color-border);
+      &-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &-text {
+          display: flex;
+          flex-direction: column;
+          margin-left: 8px;
+          span {
+            font-weight: 400;
+            &:last-child {
+              margin-top: 1px;
+              font-size: @font-size-small;
+              color: var(--dogc-color-text-2);
+            }
+            &:first-child {
+              font-size: @font-size-regular;
+              color: var(--dogc-color-text-0);
+            }
+          }
+        }
+      }
+      &-arrow {
+        svg {
+          rect,
+          path {
+            fill: var(--dogc-color-text-2);
+          }
+        }
+      }
+    }
   }
 }

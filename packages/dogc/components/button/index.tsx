@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 12:05:16
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-08 22:47:31
+ * @LastEditTime: 2021-12-10 22:21:13
  */
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
@@ -90,7 +90,7 @@ const Button: React.FC<IButtonProps> = props => {
       style={style}
       ref={buttonRef}>
       {icon && (() => icon)()}
-      {!icon && loading && <Icon type="loading" />}
+      {!icon && loading && <Icon type="loading" size={20} />}
       <span>{props.children}</span>
     </div>
   );
