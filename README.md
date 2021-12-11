@@ -27,21 +27,14 @@
 # 待做清单
 
 - [x] 按钮 Button
-
-<img width="373" alt="截屏2021-12-07 下午11 27 47" src="https://user-images.githubusercontent.com/36124772/145058025-21996814-787c-460c-9652-ad118db6c522.png">
-
 - [x] 列表项 cell
-
-<img width="378" alt="截屏2021-12-10 下午11 27 37" src="https://user-images.githubusercontent.com/36124772/145599188-b7aa2b7b-d4c6-4f1f-baa1-532742295c06.png">
-
 - [x] 图标 icon
+- [x] 全局配置 ConfigProvider
 
+# 组件预览图
+<img width="375" alt="截屏2021-12-07 下午11 27 47" src="https://user-images.githubusercontent.com/36124772/145058025-21996814-787c-460c-9652-ad118db6c522.png">
+<img width="375" alt="截屏2021-12-10 下午11 27 37" src="https://user-images.githubusercontent.com/36124772/145599188-b7aa2b7b-d4c6-4f1f-baa1-532742295c06.png">
 <img width="375" alt="截屏2021-12-08 下午11 46 15" src="https://user-images.githubusercontent.com/36124772/145238677-092594cf-fab1-4dd4-87c3-1a3a38fa4f69.png">
 
-- [x] 全局配置 ConfigProvider
-```
-// 可自定义类名前缀
-<ConfigProvider prefix="dogc"></ConfigProiver>
-```
 # 写在最后
 **如果有兴趣，可以留言，我们一起努力打造react移动端组件库。**
