@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 10:13:49
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-05 14:20:49
+ * @LastEditTime: 2021-12-11 11:22:24
  */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -46,6 +46,12 @@ module.exports = {
           },
           {
             loader: "less-loader",
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+                modifyVars: {},
+              },
+            },
           },
         ],
       },

@@ -4,11 +4,12 @@
  * @Author: wjm
  * @Date: 2021-12-07 21:01:48
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-08 23:41:44
+ * @LastEditTime: 2021-12-11 10:56:21
  */
 import React from "react";
 import classnames from "classnames";
 import "./style/index.less";
+import DogCProvider from "../config-provider";
 
 type IconType =
   | "loading"
@@ -30,11 +31,15 @@ export type IIconProps = {
   type: IconType;
   size?: number;
   fill?: string;
+  prefix?: string;
 };
 
 const Icon: React.FC<IIconProps> = props => {
-  const classes = classnames("dogc-icon");
-  const { type, size = 30, fill } = props;
+  const { type, size = 30, fill, prefix } = props;
+  const { getPrefix } = DogCProvider.useDogC();
+  const prefixCls = getPrefix("icon", prefix);
+  const classes = classnames(prefixCls);
+
   return (
     <span
       className={classes}

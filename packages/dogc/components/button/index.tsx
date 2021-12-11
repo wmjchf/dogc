@@ -4,11 +4,12 @@
  * @Author: wjm
  * @Date: 2021-11-06 12:05:16
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-10 22:21:13
+ * @LastEditTime: 2021-12-11 10:44:17
  */
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 import Icon from "../icon";
+import DogCProvider from "../config-provider";
 import "./style/index.less";
 
 type ButtonType = "info" | "primary" | "success" | "warning" | "danger";
@@ -25,6 +26,7 @@ export type IButtonProps = {
   shape?: ButtonShape;
   loading?: boolean;
   size?: ButtonSize;
+  prefix?: string;
 
   onTouchStart?: () => void;
   onTouchMove?: () => void;
@@ -40,18 +42,21 @@ const Button: React.FC<IButtonProps> = props => {
     shape,
     loading,
     size = "middle",
+    prefix,
   } = props;
   const [isTouch, setIsTouch] = useState(false);
   const [style, setStyle] = useState<React.CSSProperties>();
   const buttonRef = useRef<HTMLDivElement>(null);
-  const classes = classnames("dogc-button", {
-    [`dogc-${type}-button`]: true,
-    [`dogc-${type}-button-hover`]: isTouch,
-    [`dogc-${type}-button-plain`]: plain,
-    [`dogc-${type}-button-disabled`]: disabled,
-    [`dogc-button-icon`]: icon,
-    [`dogc-button-loading`]: loading,
-    [`dogc-${size}-button`]: true,
+  const { getPrefix } = DogCProvider.useDogC();
+  const prefixCls = getPrefix("button", prefix);
+  const classes = classnames(prefixCls, {
+    [`${prefixCls}-${type}`]: true,
+    [`${prefixCls}-${type}-hover`]: isTouch,
+    [`${prefixCls}-${type}-plain`]: plain,
+    [`${prefixCls}-${type}-disabled`]: disabled,
+    [`${prefixCls}-icon`]: icon,
+    [`${prefixCls}-loading`]: loading,
+    [`${prefixCls}-${size}`]: true,
   });
 
   // 获取dom节点

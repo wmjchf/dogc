@@ -1,7 +1,8 @@
 @import "../../icon/style/index.less";
 @import "../../style/default.less";
 @import "../../style/variable.less";
-.dogc {
+
+.@{prefix} {
   &-button {
     box-sizing: border-box;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -32,10 +33,10 @@
       }
     }
   }
-  &-primary-button {
+  &-button-primary {
     background-color: var(--dogc-color-primary);
     &-hover {
-      &.bufang-primary-button-plain {
+      &.bufang-button-primary-plain {
         background-color: var(--dogc-color-primary);
         color: var(--dogc-color-white);
       }
@@ -50,10 +51,10 @@
       background-color: var(--dogc-color-primary-disabled);
     }
   }
-  &-success-button {
+  &-button-success {
     background-color: var(--dogc-color-success);
     &-hover {
-      &.bufang-success-button-plain {
+      &.bufang-button-success-plain {
         background-color: var(--dogc-color-success);
         color: var(--dogc-color-white);
       }
@@ -68,10 +69,10 @@
       background-color: var(--dogc-color-success-disabled);
     }
   }
-  &-danger-button {
+  &-button-danger {
     background-color: var(--dogc-color-danger);
     &-hover {
-      &.bufang-danger-button-plain {
+      &.bufang-button-danger-plain {
         background-color: var(--dogc-color-danger);
         color: var(--dogc-color-white);
       }
@@ -86,10 +87,10 @@
       background-color: var(--dogc-color-danger-disabled);
     }
   }
-  &-warning-button {
+  &-button-warning {
     background-color: var(--dogc-color-warning);
     &-hover {
-      &.bufang-warning-button-plain {
+      &.bufang-button-warning-plain {
         background-color: var(--dogc-color-warning);
         color: var(--dogc-color-white);
       }
@@ -104,10 +105,10 @@
       background-color: var(--dogc-color-warning-disabled);
     }
   }
-  &-info-button {
+  &-button-info {
     background-color: var(--dogc-color-info);
     &-hover {
-      &.bufang-info-button-plain {
+      &.bufang-button-info-plain {
         background-color: var(--dogc-color-info);
         color: var(--dogc-color-white);
       }
@@ -123,17 +124,17 @@
     }
   }
 
-  &-middle-button {
+  &-button-middle {
     padding: 6px 16px;
     font-size: @font-size-small;
     min-width: 64px;
   }
-  &-small-button {
+  &-button-small {
     padding: 3px 9px;
     font-size: @font-size-xsmall;
     min-width: 64px;
   }
-  &-large-button {
+  &-button-large {
     padding: 8px 22px;
     font-size: @font-size-regular;
     min-width: 64px;
