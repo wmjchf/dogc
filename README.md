@@ -33,7 +33,8 @@
 - [x] 全局配置 ConfigProvider
 
 # 组件预览
-<img width="1280" alt="截屏2021-12-11 下午5 37 12" src="https://user-images.githubusercontent.com/36124772/145672050-8304d900-fa93-4561-b32d-b727b94efe30.png">
+<img width="1291" alt="截屏2021-12-11 下午5 45 01" src="https://user-images.githubusercontent.com/36124772/145672083-5b7ad901-abcd-425a-be3e-96e7c7c7180a.png">
+
 
 # 写在最后
 **如果有兴趣，可以留言，我们一起努力打造react移动端组件库。**
