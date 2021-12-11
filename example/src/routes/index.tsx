@@ -17,6 +17,7 @@ import ComponentList from "../pages/ComponentNav";
 import ButtonPage from "../pages/Components/Button";
 import CellPage from "../pages/Components/Cell";
 import IconPage from "../pages/Components/Icon";
+import ImagePage from "../pages/Components/Image";
 
 interface CustomRouteObject extends RouteObject {
   caseSensitive?: boolean;
@@ -66,6 +67,10 @@ const routes: CustomRouteObject[] = [
       {
         path: "cell",
         element: <CellPage />,
+      },
+      {
+        path: "image",
+        element: <ImagePage />,
       },
     ],
   },
