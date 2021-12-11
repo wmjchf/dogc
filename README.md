@@ -27,13 +27,13 @@
 # 待做清单
 
 - [x] 按钮 Button
-- [x] 列表项 cell
-- [x] 图标 icon
+- [x] 列表项 Cell
+- [x] 图标 Icon
+- [ ] 图片 Image(提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示)
 - [x] 全局配置 ConfigProvider
 
 # 组件预览
-<img width="971" alt="截屏2021-12-11 下午12 57 48" src="https://user-images.githubusercontent.com/36124772/145664490-aaf7898c-6109-4958-aaf4-85529a2d0e93.png">
-
+<img width="1280" alt="截屏2021-12-11 下午5 37 12" src="https://user-images.githubusercontent.com/36124772/145672050-8304d900-fa93-4561-b32d-b727b94efe30.png">
 
 # 写在最后
 **如果有兴趣，可以留言，我们一起努力打造react移动端组件库。**
