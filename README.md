@@ -31,5 +31,9 @@
 - [x] 图标 icon
 - [x] 全局配置 ConfigProvider
 
+# 组件预览
+<img width="971" alt="截屏2021-12-11 下午12 57 48" src="https://user-images.githubusercontent.com/36124772/145664490-aaf7898c-6109-4958-aaf4-85529a2d0e93.png">
+
+
 # 写在最后
 **如果有兴趣，可以留言，我们一起努力打造react移动端组件库。**
