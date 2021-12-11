@@ -28,7 +28,7 @@ const Cell: React.FC<ICellProps> = props => {
 
   const { getPrefix } = DogCProvider.useDogC();
   const prefixCls = getPrefix("cell", prefix);
-  const classes = classnames(prefix, {
+  const classes = classnames(prefixCls, {
     [`${prefixCls}-hover`]: isTouch,
   });
 
