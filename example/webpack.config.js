@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 10:13:49
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 11:22:24
+ * @LastEditTime: 2021-12-11 12:45:47
  */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -59,6 +59,11 @@ module.exports = {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node-modules/,
         loader: "babel-loader",
+      },
+      {
+        test: /\.(png)$/,
+        exclude: /node-modules/,
+        loader: "file-loader",
       },
     ],
   },
