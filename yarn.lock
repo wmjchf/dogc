@@ -10782,6 +10782,11 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.npm.taobao.org/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
+lodash.uniqueid@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.uniqueid/-/lodash.uniqueid-4.0.1.tgz#3268f26a7c88e4f4b1758d679271814e31fa5b26"
+  integrity sha1-MmjyanyI5PSxdY1nknGBTjH6WyY=
+
 lodash.without@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.without/-/lodash.without-4.4.0.tgz#3cd4574a00b67bae373a94b748772640507b7aac"
@@ -14363,6 +14368,14 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-photo-view@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/react-photo-view/-/react-photo-view-0.5.7.tgz#9048efddb06fe6583e24dbfed5c44209d3bd03f5"
+  integrity sha512-pUpf+COP4aZNUy2qcrVfpA9/ZcSZBtqlKCH4M3JsVQ9lx7s8B2c1cA0uPl1y+TAqd8t4Pl376wHpTI9S6x70eg==
+  dependencies:
+    lodash.debounce "^4.0.8"
+    lodash.uniqueid "^4.0.1"
 
 react-refresh@0.10.0:
   version "0.10.0"

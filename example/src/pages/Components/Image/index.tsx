@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-12-05 14:01:06
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 17:29:25
+ * @LastEditTime: 2021-12-14 00:19:34
  */
 import React, { useEffect } from "react";
 import { Image } from "@bufang/dogc";
@@ -26,7 +26,7 @@ const ImagePage: React.FC = () => {
       <div className="image_demo_container">
         <div className="image_item1">
           <div className="image_item_content">
-            <Image src={Bg2} alt="背景.png" fill="cover" />
+            <Image src={Bg2} alt="背景.png" fill="cover" isPreview={true} />
           </div>
           <span>填充模式: cover</span>
         </div>

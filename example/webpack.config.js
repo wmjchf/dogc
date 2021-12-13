@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 10:13:49
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 12:45:47
+ * @LastEditTime: 2021-12-13 23:30:40
  */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -34,6 +34,18 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.(css)$/,
+
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+        ],
+      },
       {
         test: /\.(less)$/,
 

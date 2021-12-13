@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 12:05:16
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 10:44:17
+ * @LastEditTime: 2021-12-13 23:45:04
  */
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
@@ -79,12 +79,12 @@ const Button: React.FC<IButtonProps> = props => {
   };
   const onTouchMove = () => {
     if (disabled) return;
-    props.onTouchStart && props.onTouchStart();
+    props.onTouchMove && props.onTouchMove();
   };
   const onTouchEnd = () => {
     if (disabled) return;
     setIsTouch(false);
-    props.onTouchStart && props.onTouchStart();
+    props.onTouchEnd && props.onTouchEnd();
   };
   return (
     <div
