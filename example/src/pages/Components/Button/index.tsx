@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-12-05 14:01:06
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 11:22:09
+ * @LastEditTime: 2021-12-17 22:05:34
  */
 import React, { useEffect } from "react";
 import { Button, ConfigProvider } from "@bufang/dogc";
@@ -23,7 +23,7 @@ const ButtonPage: React.FC = () => {
         </div>
         <div className="button_demo_container1">
           <span>按钮类型</span>
-          <div>
+          <div className="wrap">
             <Button type="primary">primary</Button>
             <Button type="success">success</Button>
             <Button type="info">info</Button>
@@ -34,7 +34,7 @@ const ButtonPage: React.FC = () => {
 
         <div className="button_demo_container1">
           <span>镂空按钮</span>
-          <div>
+          <div className="wrap">
             <Button type="primary" plain={true}>
               primary
             </Button>
@@ -55,7 +55,7 @@ const ButtonPage: React.FC = () => {
 
         <div className="button_demo_container1">
           <span>禁用按钮</span>
-          <div>
+          <div className="wrap">
             <Button type="primary" disabled={true}>
               primary
             </Button>
@@ -76,7 +76,7 @@ const ButtonPage: React.FC = () => {
 
         <div className="button_demo_container1">
           <span>图标按钮</span>
-          <div>
+          <div className="wrap">
             <Button
               type="primary"
               icon={<i className="iconfont iconjianshenfang"></i>}>
@@ -107,7 +107,7 @@ const ButtonPage: React.FC = () => {
 
         <div className="button_demo_container1">
           <span>圆形按钮</span>
-          <div>
+          <div className="wrap">
             <Button
               type="primary"
               icon={<i className="iconfont iconjianshenfang"></i>}
@@ -143,14 +143,29 @@ const ButtonPage: React.FC = () => {
 
         <div className="button_demo_container1">
           <span>loading按钮</span>
-          <div>
-            <Button type="primary" plain={true} loading={true} shape="circle">
+          <div className="wrap">
+            <Button
+              type="primary"
+              plain={true}
+              loading={true}
+              shape="circle"
+              loadingFill="green">
               正在加载
             </Button>
-            <Button type="success" plain={true} loading={true} shape="circle">
+            <Button
+              type="success"
+              plain={true}
+              loading={true}
+              shape="circle"
+              loadingFill="blue">
               处理中
             </Button>
-            <Button type="info" plain={true} loading={true} shape="circle">
+            <Button
+              type="info"
+              plain={true}
+              loading={true}
+              shape="circle"
+              loadingFill="orange">
               请稍等
             </Button>
             <Button type="warning" plain={true} loading={true} shape="circle">
@@ -164,7 +179,7 @@ const ButtonPage: React.FC = () => {
 
         <div className="button_demo_container1">
           <span>按钮尺寸</span>
-          <div>
+          <div className="wrap">
             <Button type="primary" size="small" plain={true} shape="circle">
               正在加载
             </Button>
@@ -181,6 +196,36 @@ const ButtonPage: React.FC = () => {
               正在努力
             </Button>
           </div>
+        </div>
+
+        <div className="button_demo_container1">
+          <span>按钮尺寸</span>
+
+          <Button
+            className="hahah"
+            type="primary"
+            size="large"
+            plain={true}
+            shape="circle">
+            正在加载
+          </Button>
+          <Button
+            className="hahah"
+            type="success"
+            size="large"
+            plain={true}
+            loading={true}>
+            正在加载
+          </Button>
+          <Button className="hahah" type="info" size="large" plain={false}>
+            正在加载
+          </Button>
+          <Button className="hahah" type="warning" size="large">
+            别急
+          </Button>
+          <Button className="hahah" type="danger" size="large">
+            正在努力
+          </Button>
         </div>
       </div>
     </ConfigProvider>

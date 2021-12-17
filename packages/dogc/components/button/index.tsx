@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 12:05:16
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-13 23:45:04
+ * @LastEditTime: 2021-12-17 22:04:28
  */
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
@@ -25,8 +25,10 @@ export type IButtonProps = {
   disabled?: boolean;
   shape?: ButtonShape;
   loading?: boolean;
+  loadingFill?: string;
   size?: ButtonSize;
   prefix?: string;
+  className?: string;
 
   onTouchStart?: () => void;
   onTouchMove?: () => void;
@@ -41,6 +43,7 @@ const Button: React.FC<IButtonProps> = props => {
     icon,
     shape,
     loading,
+    loadingFill = "red",
     size = "middle",
     prefix,
   } = props;
@@ -49,15 +52,19 @@ const Button: React.FC<IButtonProps> = props => {
   const buttonRef = useRef<HTMLDivElement>(null);
   const { getPrefix } = DogCProvider.useDogC();
   const prefixCls = getPrefix("button", prefix);
-  const classes = classnames(prefixCls, {
-    [`${prefixCls}-${type}`]: true,
-    [`${prefixCls}-${type}-hover`]: isTouch,
-    [`${prefixCls}-${type}-plain`]: plain,
-    [`${prefixCls}-${type}-disabled`]: disabled,
-    [`${prefixCls}-icon`]: icon,
-    [`${prefixCls}-loading`]: loading,
-    [`${prefixCls}-${size}`]: true,
-  });
+  const classes = classnames(
+    prefixCls,
+    {
+      [`${prefixCls}-${type}`]: true,
+      [`${prefixCls}-${type}-hover`]: isTouch,
+      [`${prefixCls}-${type}-plain`]: plain,
+      [`${prefixCls}-${type}-disabled`]: disabled,
+      [`${prefixCls}-icon`]: icon,
+      [`${prefixCls}-loading`]: loading,
+      [`${prefixCls}-${size}`]: true,
+    },
+    props.className?.split(" "),
+  );
 
   // 获取dom节点
   useEffect(() => {
@@ -95,7 +102,7 @@ const Button: React.FC<IButtonProps> = props => {
       style={style}
       ref={buttonRef}>
       {icon && (() => icon)()}
-      {!icon && loading && <Icon type="loading" size={20} />}
+      {!icon && loading && <Icon type="loading" size={20} fill={loadingFill} />}
       <span>{props.children}</span>
     </div>
   );
