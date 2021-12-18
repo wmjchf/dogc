@@ -33,7 +33,8 @@
 - [x] 全局配置 ConfigProvider
 
 # 组件预览
-<img width="1291" alt="截屏2021-12-11 下午5 45 01" src="https://user-images.githubusercontent.com/36124772/145672083-5b7ad901-abcd-425a-be3e-96e7c7c7180a.png">
+<img width="1315" alt="截屏2021-12-18 下午6 23 24" src="https://user-images.githubusercontent.com/36124772/146637725-2c1cba86-5467-4cbf-99b7-9cda31947ec3.png">
+
 
 
 # 写在最后
