@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-12-08 21:47:33
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 10:53:37
+ * @LastEditTime: 2021-12-17 22:10:06
  */
 import React, { useState } from "react";
 import classnames from "classnames";
@@ -18,19 +18,31 @@ export type ICellProps = {
   isArrow?: boolean;
   disabled?: boolean;
   prefix?: string;
+  className?: string;
   onTouchStart?: () => void;
   onTouchMove?: () => void;
   onTouchEnd?: () => void;
 };
 const Cell: React.FC<ICellProps> = props => {
-  const { icon, title, description, disabled = false, prefix } = props;
+  const {
+    icon,
+    title,
+    description,
+    disabled = false,
+    prefix,
+    className,
+  } = props;
   const [isTouch, setIsTouch] = useState(false);
 
   const { getPrefix } = DogCProvider.useDogC();
   const prefixCls = getPrefix("cell", prefix);
-  const classes = classnames(prefixCls, {
-    [`${prefixCls}-hover`]: isTouch,
-  });
+  const classes = classnames(
+    prefixCls,
+    {
+      [`${prefixCls}-hover`]: isTouch,
+    },
+    className?.split(" "),
+  );
 
   // 交互事件
   const onTouchStart = () => {

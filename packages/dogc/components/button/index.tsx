@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 12:05:16
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-17 22:04:28
+ * @LastEditTime: 2021-12-17 22:10:56
  */
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
@@ -46,6 +46,7 @@ const Button: React.FC<IButtonProps> = props => {
     loadingFill = "red",
     size = "middle",
     prefix,
+    className,
   } = props;
   const [isTouch, setIsTouch] = useState(false);
   const [style, setStyle] = useState<React.CSSProperties>();
@@ -63,7 +64,7 @@ const Button: React.FC<IButtonProps> = props => {
       [`${prefixCls}-loading`]: loading,
       [`${prefixCls}-${size}`]: true,
     },
-    props.className?.split(" "),
+    className?.split(" "),
   );
 
   // 获取dom节点

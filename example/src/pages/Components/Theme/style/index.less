@@ -1,0 +1,356 @@
+.theme_demo {
+  padding: 8px 16px;
+
+  .theme_demo_item {
+    margin-bottom: 16px;
+    & > span {
+      margin-bottom: 8px;
+      display: inline-block;
+      font-size: 16px;
+      margin-left: 3px;
+      width: 100px;
+      height: 30px;
+      background-color: yellowgreen;
+      border-radius: 20px;
+      line-height: 28px;
+      text-align: center;
+      color: #fff;
+    }
+    .theme_demo_item_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .theme_demo_item_color {
+        width: 100px;
+        height: 100px;
+        font-size: 8px;
+        border-radius: 16px;
+        margin: 0 8px 8px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding: 8px;
+        box-sizing: border-box;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+    &.primary {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-primary);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-primary-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-primary-active);
+        }
+        &:nth-child(4) {
+          background-color: var(--dogc-color-primary-disabled);
+        }
+        &:nth-child(5) {
+          background-color: var(--dogc-color-primary-light-default);
+          color: black;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-primary-light-hover);
+          color: black;
+        }
+        &:nth-child(7) {
+          background-color: var(--dogc-color-primary-light-active);
+          color: black;
+        }
+      }
+    }
+    &.secondary {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-secondary);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-secondary-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-secondary-active);
+        }
+        &:nth-child(4) {
+          background-color: var(--dogc-color-secondary-disabled);
+        }
+        &:nth-child(5) {
+          background-color: var(--dogc-color-secondary-light-default);
+          color: black;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-secondary-light-hover);
+          color: black;
+        }
+        &:nth-child(7) {
+          background-color: var(--dogc-color-secondary-light-active);
+          color: black;
+        }
+      }
+    }
+    &.tertiary {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-tertiary);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-tertiary-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-tertiary-active);
+        }
+
+        &:nth-child(4) {
+          background-color: var(--dogc-color-tertiary-light-default);
+          color: black;
+        }
+        &:nth-child(5) {
+          background-color: var(--dogc-color-tertiary-light-hover);
+          color: black;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-tertiary-light-active);
+          color: black;
+        }
+      }
+    }
+    &.info {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-info);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-info-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-info-active);
+        }
+        &:nth-child(4) {
+          background-color: var(--dogc-color-info-disabled);
+        }
+        &:nth-child(5) {
+          background-color: var(--dogc-color-info-light-default);
+          color: black;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-info-light-hover);
+          color: black;
+        }
+        &:nth-child(7) {
+          background-color: var(--dogc-color-info-light-active);
+          color: black;
+        }
+      }
+    }
+    &.success {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-success);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-success-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-success-active);
+        }
+        &:nth-child(4) {
+          background-color: var(--dogc-color-success-disabled);
+        }
+        &:nth-child(5) {
+          background-color: var(--dogc-color-success-light-default);
+          color: black;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-success-light-hover);
+          color: black;
+        }
+        &:nth-child(7) {
+          background-color: var(--dogc-color-success-light-active);
+          color: black;
+        }
+      }
+    }
+    &.danger {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-danger);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-danger-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-danger-active);
+        }
+
+        &:nth-child(4) {
+          background-color: var(--dogc-color-danger-light-default);
+          color: black;
+        }
+        &:nth-child(5) {
+          background-color: var(--dogc-color-danger-light-hover);
+          color: black;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-danger-light-active);
+          color: black;
+        }
+      }
+    }
+    &.warning {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-warning);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-warning-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-warning-active);
+        }
+        &:nth-child(4) {
+          background-color: var(--dogc-color-warning-light-default);
+          color: black;
+        }
+        &:nth-child(5) {
+          background-color: var(--dogc-color-warning-light-hover);
+          color: black;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-warning-light-active);
+          color: black;
+        }
+      }
+    }
+    &.focusBorder {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-focus-border);
+        }
+      }
+    }
+    &.disabled {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-disabled-text);
+          color: #000;
+        }
+      }
+      .theme_demo_item_color {
+        &:nth-child(2) {
+          background-color: var(--dogc-color-disabled-border);
+          color: #000;
+        }
+      }
+      .theme_demo_item_color {
+        &:nth-child(3) {
+          background-color: var(--dogc-color-disabled-bg);
+          color: #000;
+        }
+      }
+      .theme_demo_item_color {
+        &:nth-child(4) {
+          background-color: var(--dogc-color-disabled-fill);
+          color: #000;
+        }
+      }
+    }
+    &.shadowBorder {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          color: #000;
+          background-color: var(--dogc-color-shadow);
+        }
+      }
+    }
+    &.link {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-link);
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-link-hover);
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-link-active);
+        }
+        &:nth-child(4) {
+          background-color: var(--dogc-color-link-visited);
+        }
+      }
+    }
+
+    &.other {
+      .theme_demo_item_color {
+        &:nth-child(1) {
+          background-color: var(--dogc-color-border);
+          color: #000;
+        }
+        &:nth-child(2) {
+          background-color: var(--dogc-color-nav-bg);
+          color: #000;
+        }
+        &:nth-child(3) {
+          background-color: var(--dogc-color-overlay-bg);
+          color: #000;
+        }
+        &:nth-child(4) {
+          background-color: var(--dogc-color-fill-0);
+          color: #000;
+        }
+
+        &:nth-child(5) {
+          background-color: var(--dogc-color-fill-1);
+          color: #000;
+        }
+        &:nth-child(6) {
+          background-color: var(--dogc-color-fill-2);
+          color: #000;
+        }
+        &:nth-child(7) {
+          background-color: var(--dogc-color-bg-0);
+          color: #000;
+        }
+        &:nth-child(8) {
+          background-color: var(--dogc-color-bg-1);
+          color: #000;
+        }
+        &:nth-child(9) {
+          background-color: var(--dogc-color-bg-2);
+          color: #000;
+        }
+        &:nth-child(10) {
+          background-color: var(--dogc-color-bg-3);
+          color: #000;
+        }
+        &:nth-child(11) {
+          background-color: var(--dogc-color-bg-4);
+          color: #000;
+        }
+        &:nth-child(12) {
+          background-color: var(--dogc-color-text-0);
+        }
+        &:nth-child(13) {
+          background-color: var(--dogc-color-text-1);
+        }
+        &:nth-child(14) {
+          background-color: var(--dogc-color-text-3);
+        }
+        &:nth-child(15) {
+          background-color: var(--dogc-color-text-4);
+          color: #000;
+        }
+        &:nth-child(16) {
+          background-color: var(--dogc-shadow-elevated);
+          color: #000;
+        }
+      }
+    }
+  }
+}

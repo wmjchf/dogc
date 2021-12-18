@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-12-07 21:01:48
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 10:56:21
+ * @LastEditTime: 2021-12-18 09:29:20
  */
 import React from "react";
 import classnames from "classnames";
@@ -25,20 +25,23 @@ type IconType =
   | "camera"
   | "book"
   | "sleep"
-  | "smile";
+  | "smile"
+  | "imgLoading"
+  | "imgError";
 
 export type IIconProps = {
   type: IconType;
   size?: number;
   fill?: string;
   prefix?: string;
+  className?: string;
 };
 
 const Icon: React.FC<IIconProps> = props => {
-  const { type, size = 30, fill, prefix } = props;
+  const { type, size = 30, fill, prefix, className } = props;
   const { getPrefix } = DogCProvider.useDogC();
   const prefixCls = getPrefix("icon", prefix);
-  const classes = classnames(prefixCls);
+  const classes = classnames(prefixCls, className?.split(" "));
 
   return (
     <span
@@ -75,6 +78,40 @@ const Icon: React.FC<IIconProps> = props => {
               repeatCount="indefinite"
             />
           </path>
+        </svg>
+      )}
+
+      {type === "imgLoading" && (
+        <svg
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="3293"
+          width={size}
+          height={size}>
+          <path
+            d="M821.6 120.93333333H195.4c-74.1 0-134.2 60.1-134.2 134.2v492c0 74.1 60.1 134.2 134.2 134.2h626.2c74.1 0 134.2-60.1 134.2-134.2v-492c0-74.1-60.1-134.2-134.2-134.2zM251.3 255.13333333c30.9 0 55.9 25 55.9 55.9s-25 55.9-55.9 55.9-55.9-25-55.9-55.9 25-55.9 55.9-55.9z m614.6 559.1H153.3c-37.3 0-58.2-43.1-35.1-72.4L302.1 508.33333333c17.9-22.7 52.4-22.7 70.3 0l76.5 97.2 148.6-260c17.2-30.1 60.5-30.1 77.7 0L904.8 747.33333333c17 29.8-4.5 66.9-38.9 66.9z"
+            fill={fill || "#f4f1f4"}
+            p-id="3294"></path>
+        </svg>
+      )}
+
+      {type === "imgError" && (
+        <svg
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="2363"
+          width={size}
+          height={size}>
+          <path
+            d="M696.43 465.25c40.61 0 73.53-32.72 73.53-73.09s-32.96-73.08-73.53-73.08-73.54 32.72-73.54 73.08 32.92 73.09 73.54 73.09zM535.74 650.62l-273.61-259.4a56.19 56.19 0 0 0-15.36 11.58l-114 119.63-6-222.77c-0.73-26.82 20.84-49.41 47.67-50.14l201.77-5.44 47.34-50-250.43 6.75C119 202.33 76.33 247.17 77.78 301l7.32 271.4 4.5 166.78C91.06 793 136.05 835.47 190.2 834l176-4.75 12-0.32 47.34-50 116.18-122.64z"
+            p-id="2364"
+            fill={fill || "#f4f1f4"}></path>
+          <path
+            d="M861.71 214.8l-242.83-33.86-55.09 41.46L855 263a49.05 49.05 0 0 1 41.79 55.13l-54.33 389.59-120.87-159.05A59.86 59.86 0 0 0 638.06 537l-44 33.08 65.07 86.15L603.84 698l-79.57 60.1-54.92 41.48 34.17 4.76 270.73 37.76a97.55 97.55 0 0 0 109.88-79.6 22.37 22.37 0 0 0 0.65-3.44l60.53-434.16c7.44-53.32-29.95-102.62-83.6-110.1z"
+            p-id="2365"
+            fill={fill || "#f4f1f4"}></path>
         </svg>
       )}
 
