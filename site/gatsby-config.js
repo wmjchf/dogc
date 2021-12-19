@@ -1,26 +1,74 @@
-/*
- * @Descripttion:
- * @version:
- * @Author: wjm
- * @Date: 2021-11-07 15:01:24
- * @LastEditors: sueRimn
- * @LastEditTime: 2021-11-07 15:43:33
- */
 module.exports = {
   siteMetadata: {
-    title: `dogc移动端react组件`,
-    description: `致力打造一款移动端组件库`,
-    author: `@dogc`,
+    title: `M78星云——DOG WANG`,
+    description: `既然改变不了这个世界，那就改变自己。`,
+    author: `DOG WANG`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-less`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        lessOptions: {
+          modifyVars: {
+            "primary-color": "#1DA57A",
+            "link-color": "#1DA57A",
+          },
+          javascriptEnabled: true,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: `${__dirname}/json/markdown/`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {},
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
@@ -43,4 +91,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-};
+}

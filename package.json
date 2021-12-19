@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "build:dev": "cd example && webpack server",
     "build:dogc": "cd packages/dogc && npm run build",
-    "site:doc": "cd site && gatsby develop"
+    "site": "cd site && gatsby develop"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
