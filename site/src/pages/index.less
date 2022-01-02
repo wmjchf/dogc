@@ -1,0 +1,106 @@
+.blur(@blur: 10px) {
+  filter: blur(@blur);
+  -webkit-filter: blur(@blur);
+  -moz-filter: blur(@blur);
+  -o-filter: blur(@blur);
+  -ms-filter: blur(@blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='@{blur}');
+  *zoom: 1;
+}
+@font-face {
+  font-family: "myFont";
+  src: url("../font/custom02.ttf");
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  .home_descript,
+  .home_navigation {
+    flex: 1;
+    height: 100%;
+  }
+  .home_descript {
+    background: url("../images/nature.jpg");
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      margin-top: 30px;
+      color: #fff;
+      font-family: "myFont"; /* 使用 @font-face 自定义的字体 */
+    }
+
+    & > span {
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: #fff;
+      font-family: "myFont"; /* 使用 @font-face 自定义的字体 */
+    }
+    .image_container {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: relative;
+      background: red;
+      position: relative;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+      span {
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        top: 0;
+        left: 0;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 1s;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      &:hover {
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .home_navigation {
+    padding: 32px;
+    span {
+      display: inline-block;
+      width: 600px;
+      color: #232426;
+      margin-top: 36px;
+      font-size: 20px;
+      line-height: 30px;
+      font-family: "myFont"; /* 使用 @font-face 自定义的字体 */
+      i {
+        font-size: 26px;
+        margin-right: 5px;
+        color: green;
+      }
+      &:last-child {
+        margin-top: 50px;
+        color: rgba(35, 36, 38, 0.8);
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}
