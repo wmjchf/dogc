@@ -31,9 +31,10 @@
 - [x] 图标 Icon
 - [x] 图片 Image(提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示)
 - [x] 全局配置 ConfigProvider
+- [x] 轻提示 Toast 
 
 # 组件预览
-<img width="1315" alt="截屏2021-12-18 下午6 23 24" src="https://user-images.githubusercontent.com/36124772/146637725-2c1cba86-5467-4cbf-99b7-9cda31947ec3.png">
+<img width="1429" alt="截屏2022-02-03 下午11 04 24" src="https://user-images.githubusercontent.com/36124772/152369386-d2109828-b879-4b6e-b14b-21acdde62e6a.png">
 
 
 
