@@ -4,10 +4,11 @@
  * @Author: wjm
  * @Date: 2021-12-05 14:01:06
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-17 22:05:34
+ * @LastEditTime: 2022-01-09 22:05:50
  */
 import React, { useEffect } from "react";
 import { Button, ConfigProvider } from "@bufang/dogc";
+
 import "./style/index.less";
 
 const ButtonPage: React.FC = () => {

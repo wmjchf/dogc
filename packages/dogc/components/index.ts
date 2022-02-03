@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-09-10 23:09:18
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-11 16:58:32
+ * @LastEditTime: 2022-02-03 20:22:41
  */
 
 /** 组件导出*/
@@ -22,3 +22,5 @@ export { default as Icon } from "./icon";
 // 图片
 export { IImageProps } from "./image";
 export { default as Image } from "./image";
+// Toast
+export { default as Toast } from "./toast";

@@ -4,7 +4,7 @@
  * @Author: wjm
  * @Date: 2021-11-06 15:07:07
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-12-17 22:32:02
+ * @LastEditTime: 2022-02-03 20:11:49
  */
 import React from "react";
 import { RouteObject, Navigate, useRoutes } from "react-router-dom";
@@ -20,6 +20,7 @@ import CellPage from "../pages/Components/Cell";
 import IconPage from "../pages/Components/Icon";
 import ImagePage from "../pages/Components/Image";
 import ThemePage from "../pages/Components/Theme";
+import ToastPage from "../pages/Components/Toast";
 
 interface CustomRouteObject extends RouteObject {
   caseSensitive?: boolean;
@@ -81,6 +82,10 @@ const routes: CustomRouteObject[] = [
       {
         path: "theme",
         element: <ThemePage />,
+      },
+      {
+        path: "toast",
+        element: <ToastPage />,
       },
     ],
   },
